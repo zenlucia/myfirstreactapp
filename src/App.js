@@ -3,6 +3,7 @@ import './App.css';
 import Cat from './components/Cat';
 import Dog from './components/Dog';
 import ButtonNew from './components/Mybutton';
+import Button from "./components/Button"
 function App() {
   const cssStyles={
     backgroundColor: 'blue'
@@ -15,8 +16,12 @@ function App() {
         <p>
           Hello this is my first React app
         </p>
-        <Cat />
-        <Dog />
+        <div className="flex">
+          <Cat color="#eb9534" name="Tabitha" lackOfCommonSense={true} />
+          <Cat colour="#f2f2d0" name="Mog"  lackOfCommonSense={false} />
+          <Cat colour="#f2e2d0" name="Sam"  lackOfCommonSense={true} />
+        </div>
+        <Dog name="Fido" color="#472907" dogYears={4} />
         <ButtonNew />
 
       </header>
