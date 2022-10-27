@@ -1,25 +1,22 @@
 import Button from "./Button";
-function Cat({ props }) {
-    //const { name, color, lackOfCommonSense } = props; 
+function Cat({ name, color, lackOfCommonSense }) {
     const styles = {
-        backgroundColor: props.color,
-        color: props.textColor
+        backgroundColor: color
     }
     return (
         <div style={styles}>
-            <h2>Hi, I am a cat.</h2>
-            <p>My name is {props.name}</p>
-            
-            {/*this is using ternary statements which are just shorthand conditional statements
-            
-        condition ? thingtodoifcondicitonTrue:thingtodoiffalse */}
-            {props.lackOfCommonSense ?
-                <p>I have NO common sense</p>
-                :
-                <p>I do have common sense</p>
+            <h2>Meow, I am a cat.</h2>
+            <p>My name is {name}</p> 
+            <p>{
+                lackOfCommonSense === true ?
+                    <p>I have NO common sense</p>
+                    :
+                    <p>I DO have common sense</p>
             }
+            </p>
             <Button />
         </div>
     )
-
+    
+}
 export default Cat;
